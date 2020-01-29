@@ -9,7 +9,7 @@
 <p><%= @post.content %></p>
 
 <ul>
-  <% @post.users do |user| %>
+  <% @post.users.distinct do |user| %>
     <%= link_to user.username, user_path(user) %>
     <% user.comments.
   <% end %>
