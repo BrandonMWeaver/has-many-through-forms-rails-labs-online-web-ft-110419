@@ -23,5 +23,7 @@
   <%= f.hidden_field :post_id %>
   <%= f.collection_select :user_id, User.all, :id, :username %><br>
   
-  <%= f.fields_for :user, User.new do |
+  <%= f.fields_for :user, User.new do |user_f| %>
+    <%=
+  <% end %>
 <% end %>
