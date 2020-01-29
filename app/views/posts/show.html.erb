@@ -24,6 +24,6 @@
   <%= f.collection_select :user_id, User.all, :id, :username %><br>
   
   <%= f.fields_for :user, User.new do |user_f| %>
-    <%=
+    <%= user_f.text_field :username %>
   <% end %>
 <% end %>
