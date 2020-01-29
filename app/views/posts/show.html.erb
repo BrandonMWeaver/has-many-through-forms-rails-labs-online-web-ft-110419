@@ -9,8 +9,8 @@
 <p><%= @post.content %></p>
 
 <ul>
-  <% @post.comments do |comment| %>
-    <%= link_to comment.user.username, user_path(comment.user) %>
-    
+  <% @post.users do |user| %>
+    <%= link_to user.username, user_path(user) %>
+    <% user.comments.
   <% end %>
 </ul>
