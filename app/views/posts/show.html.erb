@@ -11,5 +11,10 @@
 <ul>
   <% @post.users.distinct.each do |user| %>
     <%= link_to user.username, user_path(user) %>
+    <% user.comments.each do |comment| %>
+      <% if @post.comment_ids.include?(comment.id) %>
+        <p><%= comment.content %></p>
+      <% end %>
+    <% end %>
   <% end %>
 </ul>
